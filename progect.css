@@ -1,0 +1,398 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: sans-serif;
+    margin: 0px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* landing */
+.landing{
+    background-image: url(img/pp.jpg);
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.landing .contenir{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(0 0 0 / 30%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.landing .text{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(246, 142, 7);
+    text-align: center;
+    line-height: 1.3;
+}
+.landing .text span{
+    color: rgb(255, 251, 19);
+}
+.landing .text h1{
+    font-size: 40px;
+}
+.landing .text p{
+    font-size: 30px;
+}
+/* nav */
+.nav{
+    width: 100%;
+    background-color: rgb(32, 31, 31);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    top: 0px;
+    z-index: 2;
+    position :absolute;
+}
+.nav p{
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: rgb(255, 166, 0);
+}
+.nav p span{
+    color: white;
+}
+.nav p::first-letter{
+    border: 4px solid white;
+    padding: 2px;
+    margin-right: 10px;
+    position: absolute;
+    background-color: #5f5e5e;
+    font-family: Cabin Sketch;
+}
+.nav .link ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav .link ul a{
+    text-decoration: none;
+    color: white;
+    transition: .7s;
+    width:100%;
+    height: 100%;
+    margin: 10px;
+}
+.nav .link ul li:hover{
+    background-color: rgb(246, 142, 7);
+}
+.nav .link li{
+    text-align: center;
+    transition: .7s;
+    align-items: center;
+    padding: 8px;
+}
+/* About */
+.About{
+    width: 100%;
+    padding: 0px 30px;
+    margin: 100px auto 60px auto;
+    display:flex;
+    grid-gap: 40px;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.About .text{
+    width: 455px;
+    line-height: 1.5;
+    margin: 10px auto;
+}
+.About .img{
+    margin: 10px auto;
+}
+
+.About .text h1{
+    margin-bottom: 10px;
+    color: rgb(246, 142, 7);
+}
+.About .text p{
+    font-size: 20px;
+    width: 100%;
+    margin-right: 80px;
+}
+
+/* skills */
+
+.skills{
+    padding: 40px;
+    background-color: rgb(231, 231, 231);
+    flex: 1;
+}
+.contener{
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 1.3;
+
+}
+.text a{
+    text-decoration: none;
+    border: 4px solid rgb(5, 180, 5);
+    padding: 10px 20px;
+    margin-top: 20px;
+    color:rgb(5, 180, 5) ;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .3s;
+}
+.text a:hover{
+    background-color:  rgb(5, 180, 5);
+    color:white ;
+    
+}
+.text p{
+margin-bottom: 20px;
+}
+.text h1{
+    color: rgb(246, 142, 7);
+    margin-bottom: 20px;
+}
+
+.ha{
+    width: 554px;
+    height: 55px;
+    background-color: white;
+    margin: 20px;
+
+    align-items: center;
+    display: flex;
+}
+.ha h3{
+    width: 115px;
+    text-align: center;
+}
+.ch{
+    background-color: rgb(231, 231, 231);
+    width: 425px;
+    height: 30px;
+    position: relative;
+}
+.dd{
+    position: absolute;
+    background-color: orange;
+    height:100%;
+    transition: width 2.5s linear;
+    
+}
+
+/* project */
+.project{
+    position: relative;
+}
+
+.h1{ 
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+    color: rgb(246, 142, 7);
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+.project.col{
+    position: relative;
+    width: 388px;
+    height: 270px;
+}
+.project .imgs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+    grid-gap: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+}
+.project .imgs .col{
+    border:2px solid #eee ;
+    margin: 10px auto;
+    width: 387px;
+    position: relative;
+}
+.project .col h4{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+}
+.project .col:hover h4{
+    opacity: 1;
+    color:rgb(250 250 250 );
+}
+.project .col .imgs2{
+    transition: all 1s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.project .col:hover .imgs2{
+    background-color: rgb(246 142  7/50%);
+    z-index: 1;
+    display: block;
+} 
+.project .col:hover .imgs2 p{
+    display: block;
+} 
+/* our customers */
+.customers{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    margin-top: 30px;
+    background-color: #eee;
+    text-align: center;
+    color: rgb(164, 13, 235);
+}
+.customers .contenier{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-gap: 10px;
+    text-align: center;
+    width: 100%;
+}
+.customers img{
+    width: 135px;
+    border-radius: 50%;
+    opacity: .5;
+    transition: .8s;
+}
+.customers img:hover{
+    opacity: 1;
+}
+.customers .text{
+    width: 350px;
+    margin: 25px auto;
+    align-items: center;
+    color: #333;
+}
+.cost2{
+    line-height: 1.5;
+}
+.clear{
+    clear: both;
+}
+/* Contact US */
+.Contact{
+    text-align: center;
+    align-items: center;
+    background-image: url(img/pngwing.com.png);
+    background-size: cover;
+    padding-bottom: 50px;
+}
+input,.but1{
+    background-color: #eee;
+    color: #333;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 430px;
+    height: 45px;
+    display: block;
+    margin: 0px auto 22px;
+    border: none;
+    font-size: 18px;
+}
+.but1{
+    background-color: rgb(246, 142, 7);
+    color: white;
+    cursor: pointer;
+}
+.mun {
+    display: flex;
+    margin: 100px auto;
+    width:800px;
+}
+textarea{
+    margin-left: 20px;
+    width: 353px;
+    height: 313px;
+    font-size: 18px;
+    padding: 10px;
+    color: black;
+    background-color: #eee;
+
+}
+/* footer */
+.footer{
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+    display: block;
+    font-size:25px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .text{
+    margin: 20px auto ;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.footer .text p{
+   font-size: 20px;
+   margin-top: 10px;
+}
+.footer .icon{
+    margin-left: 200px;
+    
+
+}
+.footer i{
+    border: 2px solid white; 
+    border-radius: 30%;
+    padding: 10px;
+    font-size: 20px;
+    transition: .5s;
+}
+.footer .fa-facebook-f:hover,
+.fa-twitter:hover{
+    padding: 10px;
+    color:rgb(16, 145, 250) ;
+}
+.footer .fa-youtube:hover{
+    padding: 10px;
+    color:rgb(250, 16, 28) ;
+}
+.footer .fa-linkedin-in:hover{
+    padding: 10px;
+    color:black;
+}
+.but{
+    position: fixed;
+    right: 30px;
+    bottom:30px;
+    background-color: black;
+    color: white;
+    padding: 6px;
+    border: none;
+    font-size:15px;
+    z-index: 3;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+}
+h1 div{
+    width: 110px;
+    height: 5px;
+    background-color: rgb(246, 142, 7);
+    margin: auto;
+}
